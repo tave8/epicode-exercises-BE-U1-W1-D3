@@ -1,12 +1,12 @@
 package es1;
 
 public class Rettangolo {
-    private final double altezza;
-    private final double larghezza;
+    private double altezza;
+    private double larghezza;
 
     public Rettangolo(double altezza, double larghezza) {
-        this.altezza = altezza;
-        this.larghezza = larghezza;
+        this.setAltezza(altezza);
+        this.setLarghezza(larghezza);
     }
 
     public double calcPerimetro() {
@@ -52,6 +52,21 @@ public class Rettangolo {
         return this.altezza;
     }
 
+    public void setAltezza(double altezza) {
+        if (altezza < 0) {
+            System.out.println("altezza non può essere negativa");
+        } else {
+            this.altezza = altezza;
+        }
+    }
+
+    public void setLarghezza(double larghezza) {
+        if (larghezza < 0) {
+            System.out.println("larghezza non può essere negativa");
+        } else {
+            this.larghezza = larghezza;
+        }
+    }
 
     public double getLarghezza() {
         return this.larghezza;
