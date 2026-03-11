@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Carrello {
     private Cliente cliente;
-    private Articolo[] articoli;
+    private final Articolo[] articoli = new Articolo[10];
 
     public Carrello(Cliente cliente) {
         this.setCliente(cliente);
@@ -25,7 +25,7 @@ public class Carrello {
 
     public void aggiungiArticolo(Articolo articolo) {
         //     aggiunge articolo
-        
+        this.articoli[0] = articolo;
     }
 
     public Articolo[] getArticoli() {

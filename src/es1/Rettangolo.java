@@ -17,13 +17,6 @@ public class Rettangolo {
         return this.getAltezza() * this.getLarghezza();
     }
 
-    @Override
-    public String toString() {
-        return "Rettangolo{" +
-                "area=" + this.calcArea() +
-                ", perimetro=" + this.calcPerimetro() +
-                '}';
-    }
 
     public static void stampaRettangolo(Rettangolo rettangolo) {
         System.out.println(rettangolo);
@@ -64,5 +57,23 @@ public class Rettangolo {
         return this.larghezza;
     }
 
+    public Rettangolo makeClone() {
+        return new Rettangolo(
+                this.getAltezza(),
+                this.getLarghezza()
+        );
+    }
+
+    public void stampa() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Rettangolo{" +
+                "area=" + this.calcArea() +
+                ", perimetro=" + this.calcPerimetro() +
+                '}';
+    }
 
 }
